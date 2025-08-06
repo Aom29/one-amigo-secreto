@@ -19,5 +19,14 @@ function agregarAmigo(){
     friends.push(friendName);
     clearInput();
 
-    console.log(friends);
+    updateList();
+}
+
+function updateList(){
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
+
+    friends.forEach((friend) => {
+        lista.innerHTML += `<li>${friend}</li>`;
+    });
 }
